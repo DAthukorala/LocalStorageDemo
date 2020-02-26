@@ -14,10 +14,32 @@
 <body ng-controller="DirectController as controller">
     <div>
         <form name='controller.demoForm' vs-local-storage="localStorage">
-            <label for="firstName">First name:</label>
-            <input type="text" id="firstName" name="firstName" vs-link-storage ng-model='controller.localStorage.firstName'><br><br>
-            <label for="lastName">Last name:</label>
-            <input type="text" id="lastName" name="lastName" vs-link-storage ng-model='controller.localStorage.lastName'><br><br>
+            <label></label>First name:</label>
+            <input type="text" name="firstName" vs-link-storage ng-model='controller.localStorage.firstName'><br><br>
+            <label>Last name:</label>
+            <input type="text" name="lastName" vs-link-storage ng-model='controller.localStorage.lastName'><br><br>
+            
+            <label>
+                <input name="sex" vs-link-storage ng-model="controller.localStorage.sex" type="radio" value="male"> male
+            </label>
+            <label>
+                <input name="sex" vs-link-storage ng-model="controller.localStorage.sex" type="radio" value="female"> female
+            </label><br><br>
+
+
+            <label>Title:</label>
+            <select name="title" vs-link-storage ng-model="controller.localStorage.title">
+                <option value="Mr">Mr</option>
+                <option value="Mrs">Mrs</option>
+                <option value="Ms">Ms</option>
+            </select><br><br>
+
+            <label>Do you Agree:
+                <input name="isAgreed" type="checkbox" vs-link-storage ng-model="controller.localStorage.isAgreed" ng-true-value="'YES'" ng-false-value="'NO'">
+                {{controller.localStorage.isAgreed}}
+              </label>
+
+
         </form>
     </div>
 </body>
