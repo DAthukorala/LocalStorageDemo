@@ -1,6 +1,6 @@
 $(function () {
     //initialize persistence service
-    var service = new persistenceService("sampleForm", "dummy_passphrase");
+    var service = new persistenceService("sampleForm");
 
     //fetch and show saved data
     $("#btnShowData").click(function () {

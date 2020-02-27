@@ -1,4 +1,4 @@
-function persistenceService(formId, password) {
+function persistenceService(formId) {
     var self = this;
     var options = {
         namespace: 'EMR',
@@ -19,7 +19,7 @@ function persistenceService(formId, password) {
         return self.basil.get(self.formId);
     }
 
-    function initialize(formId, password) {
+    function initialize(formId) {
         self.formId = formId;
         //initialize model service and data model
         self.db = new modelService(formId);
@@ -31,5 +31,5 @@ function persistenceService(formId, password) {
         });
     }
 
-    initialize(formId, password);
+    initialize(formId);
 }
