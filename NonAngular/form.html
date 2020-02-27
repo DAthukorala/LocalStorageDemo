@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Persisted html form</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="scripts/plugins/basil.js"></script>
+    <script src="scripts/modelService.js"></script>
+    <script src="scripts/persistenceService.js"></script>
+    <script src="scripts/form.js"></script>
+</head>
+
+<body>
+    <form id="sampleForm">
+        <label>Name:</label>
+        <input type="text" name='firstName'><br><br>
+
+        <label>Age</label>
+        <input type="radio" id="age1" name="age" value="30">
+        <label for="age1">0 - 30</label><br>
+        <input type="radio" id="age2" name="age" value="60">
+        <label for="age2">31 - 60</label><br>
+        <input type="radio" id="age3" name="age" value="100">
+        <label for="age3">61 - 100</label><br><br>
+
+        <label>DOB</label>
+        <input type="date" name="birthday"><br><br>
+
+        <label>Do you Agree:
+            <input name="isAgreed" type="checkbox" value="Agreed">
+        </label><br><br>
+    </form>
+
+    <input type="button" id="btnShowData" value="Show saved data">
+    <label id="lblSavedData"></label>
+</body>
+
+</html>
